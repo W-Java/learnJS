@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h1>如果您不使用 () 访问对象，则返回函数定义：</h1>
+
+<h2 id="demo"></h2>
+
+<script>
+  var person = {
+    firstName: 'Wang',
+    lastName: 'Jingwen',
+    fullName: function () {
+      return this.firstName + this.lastName;
+    }
+  }
+
+  document.getElementById('demo').innerHTML = person.fullName;
+</script>
+
+</body>
+</html>

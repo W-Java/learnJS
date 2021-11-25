@@ -8,10 +8,15 @@
 
 <h1 id="demo"></h1>
 
+<button
+  onclick="btnclick()"
+  >查看当前时间</button
+>
+
 <script>
-  var test = 'WJava';
-  var test;
-  document.getElementById('demo').innerHTML = test;
+  function btnclick () {
+    document.getElementById('demo').innerHTML = Date();
+  }
 </script>
 
 </body>
