@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h2 id="demo"></h2>
+
+<script>
+  const words = 'WJava is a coder in CSU'
+  const check = /[A-Z]/g
+  const ans = words.match(check)
+
+  document.getElementById('demo').innerHTML = ans   //H,M,J,W
+</script>
+
+</body>
+</html>
