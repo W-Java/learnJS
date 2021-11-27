@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h2 id="demo"></h2>
+
+<button onclick="btnClick()">button</button>
+
+<script>
+  const test = [1, 2, 3, 5, 66, 7, 999, 88, 0.6]
+  document.getElementById('demo').innerHTML = test;
+
+  function btnClick () {
+    document.getElementById('demo').innerHTML = Math.max(...test)
+    // 等价于👇
+    // document.getElementById('demo').innerHTML = Math.max(test[0], test[1], test[2], test[3], test[4], test[5], test[6], test[7], test[8])
+  }
+</script>
+
+</body>
+</html>

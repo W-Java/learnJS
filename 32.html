@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h2 id="demo"></h2>
+<button onclick="btnClick('ascending')">ascending</button>
+<button onclick="btnClick('descending')">descending</button>
+
+<!--对数字进行排序-->
+<script>
+  const test = [1, 2, 33, 4, 555, 6]
+  document.getElementById('demo').innerHTML = test;
+
+  function btnClick (txt) {
+    if (txt == 'ascending') {
+      test.sort(function (a, b) {  return a - b  })
+      document.getElementById('demo').innerHTML = test
+    } else {
+      test.sort(function (a, b) {  return b - a  })
+      document.getElementById('demo').innerHTML = test
+    }
+  }
+</script>
+
+</body>
+</html>

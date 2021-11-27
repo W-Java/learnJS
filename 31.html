@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h2 id="demo"></h2>
+
+<button onclick="btnClick()">button</button>
+
+
+<!--对字母进行升序排列-->
+<script>
+  const test = ['banana', 'Huawei', 'Apple', 'Google',]
+
+  document.getElementById('demo').innerHTML = test
+
+  function btnClick () {
+    test.sort();
+    document.getElementById('demo').innerHTML = test
+  }
+
+</script>
+
+</body>
+</html>

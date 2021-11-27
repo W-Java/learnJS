@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h2 id="demo"></h2>
+
+<script>
+  const test = ['1', '2', '3', '4', '5', '6']
+
+  test.splice(2, 3, '7')
+
+  document.getElementById('demo').innerHTML = test
+  // 1, 2, 7, 6
+</script>
+
+</body>
+</html>
