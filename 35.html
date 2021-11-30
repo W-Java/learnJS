@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h2 id="demo"></h2>
+
+<button onclick="foreach()">foreach</button>
+<button onclick="map()">map</button>
+<button onclick="filter()">filter</button>
+
+<script>
+  const test = [2, 3, 11, 4, 56]
+
+  function foreach () {
+    test.forEach((value, index) => {
+      document.getElementById('demo').innerHTML += value + ':' + index + '<br/>'
+    })
+  }
+  function map () {
+    // 👇筛选出index大于2的，剩下的全部变成undefine
+    const testMap = test.map((value, index) => {
+      if (index > 2) {
+        return value
+      }
+    })
+    console.log(testMap);
+    // 👆[undefined, undefined, undefined, 4, 56]
+  }
+  function filter () {
+    const testFilter = test.filter(value => value > 5)
+    console.log(testFilter);
+    // 👆[11, 56]
+
+    const testMap2 = test.map(value => {
+      if (value > 5) {
+        return value
+      }
+    })
+    console.log(testMap2);
+    // 👆[undefined, undefined, 11, undefined, 56]
+  }
+</script>
+
+</body>
+</html>
